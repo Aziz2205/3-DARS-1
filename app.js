@@ -1,16 +1,13 @@
-const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-const btn = document.getElementById("btn");
-const color = document.querySelector(".color");
+let son = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+let submit = document.getElementById("btn")
 
-btn.addEventListener("click", function () {
-  let hexColor = "#";
-  for (let i = 0; i < 6; i++) {
-    hexColor += hex[getRandomNumber()];
-  }
-  color.textContent = hexColor;
-  document.body.style.backgroundColor = hexColor;
-});
-
-function getRandomNumber() {
-  return Math.floor(Math.random() * hex.length);
+function rndm() {
+    return Math.floor(Math.random() * son.length);
 }
+
+submit.addEventListener("click", () => {
+    let numClr = "#";
+    for (i = 0; i < 6 ; i++ ){
+        numClr += son[rndm()];
+    }
+});
